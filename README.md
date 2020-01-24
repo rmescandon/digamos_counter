@@ -34,3 +34,16 @@ Digamooooooooss...
 ...
 
 ```
+
+## Alternative execution
+
+If tool is enough trained, you can pass *man* or *woman* cli param as the training to use.
+If no one is passed as parameter, man is taken (heteropatriarcality).
+
+```sh
+./run.sh man
+```
+
+```sh
+./runs.h woman
+```

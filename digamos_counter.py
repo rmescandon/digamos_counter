@@ -21,8 +21,8 @@ import signal
 
 interrupted = False
 
-DIGAMOS_MODEL = 'digamos_man.pmdl'
-
+DIGAMOS_MODEL_TEMPLATE = 'digamos_{}.pmdl'
+DEFAULT_WHO = 'man'
 
 def signal_handler(signal, frame):
     global interrupted
@@ -33,10 +33,15 @@ def interrupt_callback():
     global interrupted
     return interrupted
 
+who = DEFAULT_WHO
+if len(sys.argv) == 2:
+    who = sys.argv[1]
+model = DIGAMOS_MODEL_TEMPLATE.format(who)
+
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
 
-detector = snowboydecoder.HotwordDetector(DIGAMOS_MODEL, sensitivity=0.5)
+detector = snowboydecoder.HotwordDetector(model, sensitivity=0.5)
 print('Contando DIGAMOS.... Ctrl+C para salir')
 
 # main loop

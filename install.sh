@@ -23,7 +23,7 @@ workdir="$(pwd)"
 tmpdir="$(mktemp -d)"
 
 # Install requirements
-sudo apt-get install python-pyaudio python3-pyaudio sox libpcre3 libpcre3-dev libatlas-base-dev
+sudo apt-get install python-pyaudio python3-pyaudio sox libpcre3 libpcre3-dev libatlas-base-dev portaudio19-dev -y 
 pip install pyaudio
 
 # Download swig and compile
