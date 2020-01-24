@@ -24,3 +24,12 @@ Launch the tool:
 ```sh
 ./digamos_counter.py
 ```
+
+and start to say
+
+```
+Digamoooss....
+Digamooooooooss...
+...
+
+```

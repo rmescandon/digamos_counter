@@ -20,12 +20,12 @@ if [ ! -d "venv" ]; then
     is_linux=
     case "$uname_out" in
         Linux*)     sudo apt update -y
-                    sudo apt install -y python3 python3-pip virtualenv curl libcap-dev shellcheck
+                    sudo apt install -y python3 python3-pip virtualenv curl wget
                     is_linux=1
                     ;;
         Darwin*)    brew install python3 || true
                     brew install curl || true
-                    brew install shellcheck || true
+                    brew install wget || true
                     pip3 install virtualenv || true
                     curl -O https://bootstrap.pypa.io/get-pip.py
                     sudo python3 get-pip.py
@@ -36,5 +36,3 @@ if [ ! -d "venv" ]; then
 
     python3 -m virtualenv -p python3 venv
 fi	
-
-venv/bin/pip install -r "$(dirname "$0")"/requirements.txt
