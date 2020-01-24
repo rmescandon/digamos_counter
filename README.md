@@ -22,7 +22,7 @@ Install by executing the included script
 Launch the tool:
 
 ```sh
-./digamos_counter.py
+./run.sh
 ```
 
 and start to say
