@@ -43,12 +43,12 @@ git clone https://github.com/Kitt-AI/snowboy
 cd snowboy/swig/Python3
 make
 
-# # Fix snowboydecoder
-# cd "$tmpdir"
-# sed -i 's/from . import snowboydetect/import snowboydetect/' snowboy/examples/Python3/snowboydecoder.py
-
 # Copy files to project
 cp -rf "$tmpdir"/snowboy/swig/Python3/* "$workdir"
 cp -rf "$tmpdir"/snowboy/resources "$workdir"
-# cp -rf snowboy/examples/Python3/snowboydecoder.py "$workdir"
 
+echo ""
+echo "Digamos counter installed. You can now lauch it with:"
+echo ""
+echo "  ./run.sh"
+echo ""
