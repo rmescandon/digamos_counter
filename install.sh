@@ -48,7 +48,7 @@ make
 # sed -i 's/from . import snowboydetect/import snowboydetect/' snowboy/examples/Python3/snowboydecoder.py
 
 # Copy files to project
-cp -rf snowboy/swig/Python3/* "$workdir"
-cp -rf snowboy/resources "$workdir"
+cp -rf "$tmpdir"/snowboy/swig/Python3/* "$workdir"
+cp -rf "$tmpdir"/snowboy/resources "$workdir"
 # cp -rf snowboy/examples/Python3/snowboydecoder.py "$workdir"
 

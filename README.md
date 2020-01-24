@@ -10,6 +10,7 @@ Clone the repository
 
 ```sh
 git clone https://github.com/rmescandon/digamos_counter.git
+cd digamos_counter
 ```
 
 Install by executing the included script
